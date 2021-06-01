@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Mata-Mosquito</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/script.js"></script>
+  </head>
+  <body onresize="adjustsWindow()">
+    <div class="panel">
+      <div class="hearts">
+        <img id="heart1" src="/img/coracao_cheio.png" />
+        <img id="heart2" src="/img/coracao_cheio.png" />
+        <img id="heart3" src="/img/coracao_cheio.png" />
+      </div>
+      <div class="stopwatch">Tempo restante: <span id="timer"></span></div>
+    </div>
+
+    <script>
+      document.getElementById('timer').innerHTML = time;
+
+      randomPosition();
+      let createGnat = setInterval(function () {
+        randomPosition();
+      }, makeGnatTime);
+    </script>
+  </body>
+</html>
